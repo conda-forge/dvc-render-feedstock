@@ -12,12 +12,13 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - python >=3.7
+    - setuptools_scm >=6.3.1
   run:
     - funcy >=1.17
     - python >=3.7
