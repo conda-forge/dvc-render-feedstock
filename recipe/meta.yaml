@@ -23,7 +23,7 @@ requirements:
     - funcy >=1.17
     - python >=3.7
     - tabulate >=0.8.7
-    - flatten_dict <1,>=0.4.1
+    - flatten_dict >=0.4.1
 
 test:
   imports:
