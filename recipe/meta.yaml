@@ -1,5 +1,5 @@
 {% set name = "dvc-render" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dvc-render-{{ version }}.tar.gz
-  sha256: e322b2dacb7d27515bb1840ef217ede62cb88cd1f884608842a569882294d3b4
+  sha256: 009dc09db44e416285c719324d8e101f675a58d7d846822a9faef307df22c7f2
 
 build:
   noarch: python
