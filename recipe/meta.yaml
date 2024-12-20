@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dvc-render-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dvc-render-{{ version }}.tar.gz
   sha256: 40d1cd81760daf34b48fa8362b5002fcbe415e3cdbcf42369b6347d01497ffc0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools_scm >=6.3.1
   run:
     - funcy >=1.17
-    - python >=3.7
+    - python >={{ python_min }}
     - tabulate >=0.8.7
     - flatten-dict >=0.4.1
 
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/iterative/dvc-render
